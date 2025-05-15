@@ -1,0 +1,477 @@
+/* Global Styles */
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --accent: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 15px auto;
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Navigation */
+#navbar {
+    background: var(--primary);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin-left: 30px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: var(--secondary);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                url('https://img.freepik.com/free-vector/hand-drawn-scientific-formulas-chalkboard_23-2148496321.jpg?t=st=1744759898~exp=1744763498~hmac=bfb8b9bace028a081c73da91cf505721a40bd3081ce1d807483302311e5ad30c&w=996');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero .title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.social-links {
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text h3 {
+    margin: 20px 0 15px;
+    color: var(--primary);
+}
+
+.about-text ul {
+    margin-left: 20px;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+}
+
+.awards .award-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid var(--secondary);
+}
+
+.award-item .year {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Research Section */
+.tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.publication-list {
+    list-style: none;
+}
+
+.publication-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.pub-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.pub-journal {
+    display: block;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.pub-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.patent-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.patent-item, .project-item {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.patent-item h4, .project-item h4 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.patent-no, .amount {
+    display: inline-block;
+    background: var(--light);
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Books Section */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.book-cover h3 {
+    font-size: 1.3rem;
+}
+
+.book-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.book-info p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--secondary);
+    width: 20px;
+}
+
+.contact-links a {
+    display: block;
+    margin: 15px 0;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-links i {
+    margin-right: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 20px;
+    color: #ddd;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #navbar .container {
+        flex-direction: column;
+    }
+    
+    #navbar ul {
+        margin-top: 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        text-align: left;
+    }
+    
+    .tab-btn.active {
+        border-left: 3px solid var(--secondary);
+        border-bottom: none;
+    }
+}
+a.niche{
+    color: white;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
